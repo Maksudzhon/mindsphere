@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindSphere — Global Knowledge Platform</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="logo">
+                <span class="logo-icon">⬡</span>
+                <span class="logo-text">MindSphere</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features" data-i18n="nav_features">Features</a></li>
+                <li><a href="#knowledge" data-i18n="nav_knowledge">Knowledge</a></li>
+                <li><a href="#community" data-i18n="nav_community">Community</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="uz">UZ</button>
+                </div>
+                <button class="info-btn" id="infoBtn" title="About MindSphere">ℹ️</button>
+                <a href="admin.html" class="nav-cta" data-i18n="nav_signin">Sign In</a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#features" data-i18n="nav_features">Features</a>
+            <a href="#knowledge" data-i18n="nav_knowledge">Knowledge</a>
+            <a href="#community" data-i18n="nav_community">Community</a>
+            <div class="mobile-lang">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="uz">UZ</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- INFO MODAL -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-card">
+            <button class="modal-close" id="modalClose">✕</button>
+            <div class="modal-icon">⬡</div>
+            <h2 class="modal-title" data-i18n="modal_title">What is MindSphere?</h2>
+            <p class="modal-text" data-i18n="modal_text">MindSphere is a next-generation global knowledge platform
+                connecting millions of curious minds across 190+ countries. We empower learners, researchers, and
+                creators to explore, share, and build knowledge together — in any language, at any time.</p>
+            <div class="modal-stats">
+                <div class="modal-stat"><span class="stat-num">2.4M+</span><span class="stat-lbl"
+                        data-i18n="modal_users">Active Users</span></div>
+                <div class="modal-stat"><span class="stat-num">190+</span><span class="stat-lbl"
+                        data-i18n="modal_countries">Countries</span></div>
+                <div class="modal-stat"><span class="stat-num">48K+</span><span class="stat-lbl"
+                        data-i18n="modal_articles">Articles</span></div>
+            </div>
+            <button class="modal-cta" data-i18n="modal_cta">Explore Now</button>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="orb orb1"></div>
+            <div class="orb orb2"></div>
+            <div class="orb orb3"></div>
+            <div class="grid-lines"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge" data-i18n="hero_badge">🌍 Trusted by 2.4M+ learners worldwide</div>
+            <h1 class="hero-title">
+                <span class="line" data-i18n="hero_title1">The World's</span>
+                <span class="line gradient-text" data-i18n="hero_title2">Knowledge Hub</span>
+                <span class="line" data-i18n="hero_title3">Reimagined.</span>
+            </h1>
+            <p class="hero-sub" data-i18n="hero_sub">Connect with the brightest minds. Discover ideas that reshape how
+                you see the world. Learn anything, from anywhere — in your language.</p>
+            <div class="hero-btns">
+                <a href="#knowledge" class="btn-primary" data-i18n="hero_cta1">Start Exploring</a>
+                <a href="#features" class="btn-ghost" data-i18n="hero_cta2">See How It Works</a>
+            </div>
+            <div class="hero-social-proof">
+                <div class="avatars">
+                    <img src="https://i.pravatar.cc/40?img=1" alt="" />
+                    <img src="https://i.pravatar.cc/40?img=2" alt="" />
+                    <img src="https://i.pravatar.cc/40?img=3" alt="" />
+                    <img src="https://i.pravatar.cc/40?img=4" alt="" />
+                    <span>+2.4M</span>
+                </div>
+                <p data-i18n="hero_proof">Joined this month</p>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-card card-a">
+                <div class="fc-icon">🧠</div>
+                <div class="fc-text"><strong>AI-Curated</strong><br>Smart content for you</div>
+            </div>
+            <div class="floating-card card-b">
+                <div class="fc-icon">🌐</div>
+                <div class="fc-text"><strong>50+ Languages</strong><br>Global reach</div>
+            </div>
+            <div class="floating-card card-c">
+                <div class="fc-icon">⚡</div>
+                <div class="fc-text"><strong>Real-time</strong><br>Live knowledge feed</div>
+            </div>
+            <div class="globe-wrapper">
+                <div class="globe"></div>
+                <div class="globe-ring r1"></div>
+                <div class="globe-ring r2"></div>
+                <div class="globe-ring r3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <section class="stats-bar">
+        <div class="stats-inner">
+            <div class="stat-item">
+                <span class="stat-val" data-count="2400000">0</span>
+                <span class="stat-unit">+</span>
+                <span class="stat-desc" data-i18n="stat_users">Active Learners</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-val" data-count="48000">0</span>
+                <span class="stat-unit">+</span>
+                <span class="stat-desc" data-i18n="stat_articles">Knowledge Articles</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-val" data-count="190">0</span>
+                <span class="stat-unit">+</span>
+                <span class="stat-desc" data-i18n="stat_countries">Countries Reached</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-val" data-count="99">0</span>
+                <span class="stat-unit">%</span>
+                <span class="stat-desc" data-i18n="stat_uptime">Platform Uptime</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" id="features">
+        <div class="section-header">
+            <span class="section-tag" data-i18n="feat_tag">Platform Features</span>
+            <h2 data-i18n="feat_title">Built for the Curious Mind</h2>
+            <p data-i18n="feat_sub">Every feature designed to accelerate your growth and deepen your understanding.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feat-card feat-large">
+                <div class="feat-icon">🧠</div>
+                <h3 data-i18n="feat1_title">AI Knowledge Graph</h3>
+                <p data-i18n="feat1_desc">Our proprietary AI maps connections between ideas, surfacing insights you'd
+                    never find on your own. Explore knowledge like never before.</p>
+                <div class="feat-tag">AI-Powered</div>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">🌍</div>
+                <h3 data-i18n="feat2_title">Multilingual</h3>
+                <p data-i18n="feat2_desc">Read and write in 50+ languages with instant AI translation.</p>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">👥</div>
+                <h3 data-i18n="feat3_title">Peer Learning</h3>
+                <p data-i18n="feat3_desc">Collaborate with experts from top universities and institutions.</p>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">📊</div>
+                <h3 data-i18n="feat4_title">Progress Analytics</h3>
+                <p data-i18n="feat4_desc">Track your learning journey with detailed personal dashboards.</p>
+            </div>
+            <div class="feat-card feat-wide">
+                <div class="feat-icon">⚡</div>
+                <h3 data-i18n="feat5_title">Real-Time Knowledge Feed</h3>
+                <p data-i18n="feat5_desc">Stay at the forefront of every field with curated feeds from the world's top
+                    researchers, writers, and thought leaders — updated the moment new discoveries happen.</p>
+                <div class="feat-visual">
+                    <div class="feed-item"><span class="feed-dot"></span> New study on quantum computing — MIT, 2 min
+                        ago</div>
+                    <div class="feed-item"><span class="feed-dot"></span> Breakthrough in CRISPR research — Stanford, 5
+                        min ago</div>
+                    <div class="feed-item"><span class="feed-dot"></span> Economic forecast update — IMF, 12 min ago
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KNOWLEDGE POSTS -->
+    <section class="knowledge" id="knowledge">
+        <div class="section-header">
+            <span class="section-tag" data-i18n="know_tag">Knowledge Base</span>
+            <h2 data-i18n="know_title">Latest from MindSphere</h2>
+            <p data-i18n="know_sub">Community-curated insights, research, and discoveries.</p>
+        </div>
+        <div class="posts-grid" id="postsGrid">
+            <!-- Posts injected by JS -->
+        </div>
+        <div class="empty-state" id="emptyState" style="display:none;">
+            <div class="empty-icon">📚</div>
+            <p data-i18n="empty_posts">No posts yet. Admin is preparing amazing content.</p>
+        </div>
+    </section>
+
+    <!-- COMMUNITY -->
+    <section class="community" id="community">
+        <div class="community-inner">
+            <div class="community-text">
+                <span class="section-tag" data-i18n="comm_tag">Community</span>
+                <h2 data-i18n="comm_title">Join a Global Movement of Learners</h2>
+                <p data-i18n="comm_desc">From students in Tashkent to researchers in Tokyo — MindSphere brings together
+                    the world's most curious people in one place.</p>
+                <div class="comm-features">
+                    <div class="comm-feat"><span>🎯</span>
+                        <div><strong data-i18n="cf1_t">Expert Circles</strong>
+                            <p data-i18n="cf1_d">Join topic-specific groups led by verified experts.</p>
+                        </div>
+                    </div>
+                    <div class="comm-feat"><span>🏆</span>
+                        <div><strong data-i18n="cf2_t">Knowledge Rankings</strong>
+                            <p data-i18n="cf2_d">Earn recognition for your contributions to the community.</p>
+                        </div>
+                    </div>
+                    <div class="comm-feat"><span>📡</span>
+                        <div><strong data-i18n="cf3_t">Live Sessions</strong>
+                            <p data-i18n="cf3_d">Attend live lectures and Q&As from anywhere in the world.</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn-primary" data-i18n="comm_cta">Join the Community</a>
+            </div>
+            <div class="community-visual">
+                <div class="members-wall">
+                    <div class="member-row">
+                        <img src="https://i.pravatar.cc/56?img=5" alt="" />
+                        <img src="https://i.pravatar.cc/56?img=6" alt="" />
+                        <img src="https://i.pravatar.cc/56?img=7" alt="" />
+                        <img src="https://i.pravatar.cc/56?img=8" alt="" />
+                    </div>
+                    <div class="member-row shifted">
+                        <img src="https://i.pravatar.cc/56?img=9" alt="" />
+                        <img src="https://i.pravatar.cc/56?img=10" alt="" />
+                        <img src="https://i.pravatar.cc/56?img=11" alt="" />
+                        <img src="https://i.pravatar.cc/56?img=12" alt="" />
+                    </div>
+                    <div class="member-row">
+                        <img src="https://i.pravatar.cc/56?img=13" alt="" />
+                        <img src="https://i.pravatar.cc/56?img=14" alt="" />
+                        <img src="https://i.pravatar.cc/56?img=15" alt="" />
+                        <img src="https://i.pravatar.cc/56?img=16" alt="" />
+                    </div>
+                    <div class="member-row shifted">
+                        <img src="https://i.pravatar.cc/56?img=17" alt="" />
+                        <img src="https://i.pravatar.cc/56?img=18" alt="" />
+                        <img src="https://i.pravatar.cc/56?img=19" alt="" />
+                        <img src="https://i.pravatar.cc/56?img=20" alt="" />
+                    </div>
+                </div>
+                <div class="comm-badge">
+                    <span class="cb-emoji">🌍</span>
+                    <span data-i18n="comm_badge">190+ Countries</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo"><span class="logo-icon">⬡</span><span class="logo-text">MindSphere</span></div>
+                <p data-i18n="footer_tagline">Expanding the boundaries of human knowledge, together.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="GitHub">⌥</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="fl-col">
+                    <h4 data-i18n="fl_product">Product</h4>
+                    <a href="#" data-i18n="fl_features">Features</a>
+                    <a href="#" data-i18n="fl_pricing">Pricing</a>
+                    <a href="#" data-i18n="fl_changelog">Changelog</a>
+                    <a href="#" data-i18n="fl_roadmap">Roadmap</a>
+                </div>
+                <div class="fl-col">
+                    <h4 data-i18n="fl_company">Company</h4>
+                    <a href="#" data-i18n="fl_about">About</a>
+                    <a href="#" data-i18n="fl_blog">Blog</a>
+                    <a href="#" data-i18n="fl_careers">Careers</a>
+                    <a href="#" data-i18n="fl_press">Press</a>
+                </div>
+                <div class="fl-col">
+                    <h4 data-i18n="fl_legal">Legal</h4>
+                    <a href="#" data-i18n="fl_privacy">Privacy</a>
+                    <a href="#" data-i18n="fl_terms">Terms</a>
+                    <a href="#" data-i18n="fl_cookies">Cookies</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer_copy">© 2026 MindSphere. All rights reserved.</p>
+            <p data-i18n="footer_made">Made with ❤️ for curious minds everywhere.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindSphere — Admin Panel</title>
+    <link rel="stylesheet" href="admin.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- ===== LOGIN SCREEN ===== -->
+    <div class="login-screen" id="loginScreen">
+        <div class="login-bg">
+            <div class="orb orb1"></div>
+            <div class="orb orb2"></div>
+            <div class="grid-lines"></div>
+        </div>
+        <div class="login-card">
+            <div class="login-logo">
+                <span class="logo-icon">⬡</span>
+                <span class="logo-text">MindSphere</span>
+            </div>
+            <div class="login-badge">Admin Panel</div>
+            <h1 class="login-title">Welcome back</h1>
+            <p class="login-sub">Sign in to manage the platform</p>
+            <div class="login-form">
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" id="loginInput" placeholder="Enter your username" autocomplete="username" />
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <div class="pw-wrapper">
+                        <input type="password" id="passwordInput" placeholder="Enter your password"
+                            autocomplete="current-password" />
+                        <button class="pw-toggle" id="pwToggle" type="button">👁</button>
+                    </div>
+                </div>
+                <div class="login-error" id="loginError">Invalid credentials. Please try again.</div>
+                <button class="login-btn" id="loginBtn">Sign In</button>
+            </div>
+            <p class="login-back"><a href="index.html">← Back to MindSphere</a></p>
+        </div>
+    </div>
+
+    <!-- ===== DASHBOARD ===== -->
+    <div class="dashboard" id="dashboard" style="display:none;">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <span class="logo-icon">⬡</span>
+                <span class="logo-text">MindSphere</span>
+            </div>
+            <nav class="sidebar-nav">
+                <button class="snav-item active" data-tab="overview">
+                    <span>📊</span> Overview
+                </button>
+                <button class="snav-item" data-tab="posts">
+                    <span>📝</span> Posts
+                </button>
+                <button class="snav-item" data-tab="create">
+                    <span>✨</span> New Post
+                </button>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="admin-user">
+                    <div class="admin-avatar">A</div>
+                    <div class="admin-info">
+                        <span class="admin-name">Administrator</span>
+                        <span class="admin-role">Super Admin</span>
+                    </div>
+                </div>
+                <button class="logout-btn" id="logoutBtn" title="Logout">⏏</button>
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="dash-main">
+            <!-- Header -->
+            <div class="dash-header">
+                <div class="dash-title-area">
+                    <h2 class="dash-title" id="dashTitle">Overview</h2>
+                    <p class="dash-sub" id="dashSub">Welcome back, Administrator</p>
+                </div>
+                <div class="dash-header-actions">
+                    <a href="index.html" target="_blank" class="view-site-btn">🌐 View Site</a>
+                </div>
+            </div>
+
+            <!-- OVERVIEW TAB -->
+            <div class="tab-content active" id="tab-overview">
+                <div class="overview-stats">
+                    <div class="ostat-card">
+                        <div class="ostat-icon">📝</div>
+                        <div class="ostat-data">
+                            <span class="ostat-val" id="totalPosts">0</span>
+                            <span class="ostat-lbl">Total Posts</span>
+                        </div>
+                    </div>
+                    <div class="ostat-card">
+                        <div class="ostat-icon">👁</div>
+                        <div class="ostat-data">
+                            <span class="ostat-val">—</span>
+                            <span class="ostat-lbl">Total Views</span>
+                        </div>
+                    </div>
+                    <div class="ostat-card">
+                        <div class="ostat-icon">👥</div>
+                        <div class="ostat-data">
+                            <span class="ostat-val">2.4M+</span>
+                            <span class="ostat-lbl">Platform Users</span>
+                        </div>
+                    </div>
+                    <div class="ostat-card">
+                        <div class="ostat-icon">🌍</div>
+                        <div class="ostat-data">
+                            <span class="ostat-val">190+</span>
+                            <span class="ostat-lbl">Countries</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="overview-recent">
+                    <h3>Recent Posts</h3>
+                    <div class="recent-posts-list" id="recentPostsList">
+                        <p class="no-posts">No posts yet. <button onclick="switchTab('create')">Create your first post
+                                →</button></p>
+                    </div>
+                </div>
+                <div class="overview-info">
+                    <div class="info-card">
+                        <div class="info-icon">⚡</div>
+                        <div>
+                            <h4>Posts go live instantly</h4>
+                            <p>Any post you create will appear immediately on the public website via localStorage.</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🔒</div>
+                        <div>
+                            <h4>Session Protected</h4>
+                            <p>Your admin session is secure and will expire when you log out or close the browser.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- POSTS TAB -->
+            <div class="tab-content" id="tab-posts" style="display:none;">
+                <div class="posts-actions">
+                    <div class="search-bar">
+                        <span>🔍</span>
+                        <input type="text" id="searchInput" placeholder="Search posts..." />
+                    </div>
+                    <button class="btn-new-post" onclick="switchTab('create')">+ New Post</button>
+                </div>
+                <div class="admin-posts-list" id="adminPostsList">
+                    <!-- Posts rendered by JS -->
+                </div>
+                <div class="no-posts-empty" id="noPostsEmpty" style="display:none;">
+                    <div class="npe-icon">📭</div>
+                    <h3>No posts found</h3>
+                    <p>Try a different search or create a new post.</p>
+                    <button class="btn-new-post" onclick="switchTab('create')">+ Create New Post</button>
+                </div>
+            </div>
+
+            <!-- CREATE / EDIT TAB -->
+            <div class="tab-content" id="tab-create" style="display:none;">
+                <div class="editor-card">
+                    <div class="editor-header">
+                        <h3 id="editorTitle">Create New Post</h3>
+                        <span class="editor-badge" id="editorBadge">New Post</span>
+                    </div>
+                    <input type="hidden" id="editingId" />
+                    <div class="editor-form">
+                        <div class="ef-row">
+                            <div class="ef-group ef-grow">
+                                <label>Post Title *</label>
+                                <input type="text" id="postTitle" placeholder="Enter an engaging title..." />
+                            </div>
+                            <div class="ef-group">
+                                <label>Category</label>
+                                <select id="postCategory">
+                                    <option value="Science">Science</option>
+                                    <option value="Technology">Technology</option>
+                                    <option value="Philosophy">Philosophy</option>
+                                    <option value="Economics">Economics</option>
+                                    <option value="Culture">Culture</option>
+                                    <option value="Research">Research</option>
+                                    <option value="Education">Education</option>
+                                    <option value="Innovation">Innovation</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="ef-row">
+                            <div class="ef-group ef-grow">
+                                <label>Author Name</label>
+                                <input type="text" id="postAuthor" placeholder="e.g. Dr. Sarah Chen" />
+                            </div>
+                        </div>
+                        <div class="ef-group">
+                            <label>Content *</label>
+                            <textarea id="postContent" rows="10"
+                                placeholder="Write your post content here. Share knowledge, insights, and discoveries with the MindSphere community..."></textarea>
+                            <div class="char-count"><span id="charCount">0</span> characters</div>
+                        </div>
+                        <div class="editor-actions">
+                            <button class="btn-cancel" id="cancelEdit" style="display:none;">Cancel Edit</button>
+                            <button class="btn-save" id="savePost">Publish Post</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- DELETE MODAL -->
+    <div class="del-overlay" id="delOverlay">
+        <div class="del-modal">
+            <div class="del-icon">🗑️</div>
+            <h3>Delete Post?</h3>
+            <p>This action cannot be undone. The post will be permanently removed from MindSphere.</p>
+            <div class="del-actions">
+                <button class="del-cancel" id="delCancel">Cancel</button>
+                <button class="del-confirm" id="delConfirm">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast"></div>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>
